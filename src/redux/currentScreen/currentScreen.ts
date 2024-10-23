@@ -5,7 +5,7 @@ import {RootState} from "../mainStorage";
 export const currentScreen = createSlice({
     name: "currentScreen",
     initialState: {
-        value : CurrentScreen.Study
+        value : CurrentScreen.Manage
     },
     reducers: {
         changeCurrentScreen(state) {

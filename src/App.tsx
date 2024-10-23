@@ -1,5 +1,7 @@
 import {useAppSelector} from "./redux/hooks";
 import CurrentScreen from "./structs&constants&enums/enums";
+import ManageScreenComponent from "./Screens/Manage/ManageScreen.component";
+import StudyScreenComponent from "./Screens/Study/StudyScreen.component";
 
 
 const App = () => {
@@ -8,8 +10,8 @@ const App = () => {
     return <div>
         {
             currentScreen === CurrentScreen.Manage
-                ? <div>Manage Screen</div>
-                : <div>Study Screen</div>
+                ? <ManageScreenComponent/>
+                : <StudyScreenComponent/>
         }
     </div>
 }
