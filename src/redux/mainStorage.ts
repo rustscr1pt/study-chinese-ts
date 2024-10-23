@@ -1,7 +1,7 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {currentScreen} from "./currentScreen/currentScreen";
 
-const application = configureStore({
+export const application = configureStore({
     reducer: {
         currentScreen : currentScreen.reducer
     }
