@@ -2,8 +2,8 @@ import {createSlice} from "@reduxjs/toolkit";
 import CurrentScreen from "../../structs&constants&enums/enums";
 import {RootState} from "../mainStorage";
 
-export const currentScreen = createSlice({
-    name: "currentScreen",
+export const currentScreenStore = createSlice({
+    name: "currentScreenStore",
     initialState: {
         value : CurrentScreen.Manage
     },
@@ -14,9 +14,9 @@ export const currentScreen = createSlice({
     }
 })
 
-export const {changeCurrentScreen} = currentScreen.actions;
+export const {changeCurrentScreen} = currentScreenStore.actions;
 export const readCurrentScreen = (state : RootState) => {
     return state.currentScreen.value
 }
 
-export default currentScreen.reducer
+export default currentScreenStore.reducer
