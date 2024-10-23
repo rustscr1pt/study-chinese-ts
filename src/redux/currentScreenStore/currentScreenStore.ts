@@ -16,7 +16,7 @@ export const currentScreenStore = createSlice({
 
 export const {changeCurrentScreen} = currentScreenStore.actions;
 export const readCurrentScreen = (state : RootState) => {
-    return state.currentScreen.value
+    return state.currentScreenStore.value
 }
 
 export default currentScreenStore.reducer

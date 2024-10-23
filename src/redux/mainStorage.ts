@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {currentScreenStore} from "./currentScreenStore/currentScreenStore";
+import {studyObjectStore} from "./studyObjectStore/studyObjectStore";
 
 export const application = configureStore({
     reducer: {
-        currentScreen : currentScreenStore.reducer
+        currentScreenStore : currentScreenStore.reducer,
+        studyObjectStore : studyObjectStore.reducer
     }
 })
 

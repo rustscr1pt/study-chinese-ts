@@ -1,5 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {StudyObject} from "../../structs&constants&enums/structs";
+import {RootState} from "../mainStorage";
 
 export const studyObjectStore = createSlice({
     name : "studyObjectStore",
@@ -12,3 +13,10 @@ export const studyObjectStore = createSlice({
         }
     }
 })
+
+export const {addToObjectStore} = studyObjectStore.actions;
+export const readStudyObjectStore = (state : RootState) => {
+    return state.studyObjectStore.value
+}
+
+export default studyObjectStore.reducer;
