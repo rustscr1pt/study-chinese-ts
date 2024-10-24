@@ -1,14 +1,28 @@
 import {Button} from "@mui/material";
-import {ButtonGroup} from "@mui/material";
+import "./ChangeScreenButtonGroup.style.sass";
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
+import PlaylistAddRoundedIcon from '@mui/icons-material/PlaylistAddRounded';
+
 
 const ChangeScreenButtonGroupComponent = () => {
-    return <div style={{width : "100%"}}>
-        <ButtonGroup
-            variant="contained"
-        >
-            <Button sx={{flex : 1, mx : 1}}>Учить</Button>
-            <Button sx={{flex : 1, mx : 1}}>Добавить</Button>
-        </ButtonGroup>
+    return <div className="ChangeScreenButtonGroup">
+        <div className="ChangeScreenButtonGroup__div">
+            <Button
+                variant="contained"
+                sx={{width : "35%", fontSize : "1.3vw"}}
+                endIcon={<SchoolRoundedIcon/>}
+                onClick={() => {}}
+            >
+                Study
+            </Button>
+            <Button
+                variant="contained"
+                sx={{width : "35%", fontSize : "1.3vw"}}
+                endIcon={<PlaylistAddRoundedIcon/>}
+            >
+                Add
+            </Button>
+        </div>
     </div>
 }
 export default ChangeScreenButtonGroupComponent;
