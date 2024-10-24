@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import CurrentScreen from "../../structs&constants&enums/enums";
 import {RootState} from "../mainStorage";
 
@@ -8,8 +8,10 @@ export const currentScreenStore = createSlice({
         value : CurrentScreen.Manage
     },
     reducers: {
-        changeCurrentScreen(state) {
-            state.value = state.value === CurrentScreen.Manage ? CurrentScreen.Study : CurrentScreen.Manage
+        changeCurrentScreen(state, action : PayloadAction<CurrentScreen>) : void {
+            if (state.value !== action.payload) {
+                state.value = action.payload
+            }
         }
     }
 })
